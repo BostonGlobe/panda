@@ -2,9 +2,9 @@
 
 import os
 
-import django.core.handlers.wsgi
+import django.core.wsgi
 
 os.environ["DJANGO_SETTINGS_MODULE"] = "config.jumpstart.settings"
 
-application = django.core.handlers.wsgi.WSGIHandler()
+application = django.core.wsgi.get_wsgi_application()
 

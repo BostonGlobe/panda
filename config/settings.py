@@ -9,6 +9,7 @@ from django.utils.translation import ugettext_lazy as _
 # Which settings are we using?
 # Useful for debugging.
 SETTINGS = 'base'
+TEST_RUNNER = 'django.test.runner.DiscoverRunner'
 
 # Base paths
 DJANGO_ROOT = os.path.dirname(os.path.realpath(django.__file__))
@@ -110,7 +111,6 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.staticfiles',
 
-    'south',
     'tastypie',
     'djcelery',
     'compressor',

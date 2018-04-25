@@ -2,7 +2,7 @@
 
 from mimetypes import guess_type
 
-from django.conf.urls.defaults import url
+from django.conf.urls import url
 from django.core.servers.basehttp import FileWrapper
 from django.http import HttpResponse
 from tastypie import fields

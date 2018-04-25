@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 from django.conf import settings
-from django.conf.urls.defaults import url
+from django.conf.urls import url
 from django.utils.translation import ugettext_lazy as _
 from tastypie import fields
 from tastypie import http

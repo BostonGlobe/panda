@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
 from django.conf import settings
-from django.conf.urls.defaults import url
+from django.conf.urls import url
 from django.core.exceptions import ObjectDoesNotExist
-from django.core.validators import email_re
+from django.core.validators import validate_email
 from django.utils.translation import ugettext_lazy as _
 from tastypie import fields
 from tastypie import http
@@ -22,9 +22,11 @@ class UserValidation(Validation):
 
         if 'email' not in bundle.data or not bundle.data['email']:
             errors['email'] = [_('This field is required.')]
-        elif not email_re.match(bundle.data['email']):
-            errors['email'] = [_('Email address is not valid.')]
-
+        else:
+            try:
+                validate_email(bundle.data['email'])
+            except ValidationError as e:
+                errors['email'] = [_('Email address is not valid.')] 
         return errors
 
 class UserAuthorization(Authorization):

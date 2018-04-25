@@ -8,9 +8,9 @@ kombu-sqlalchemy==1.1.0
 python-dateutil==1.5
 lxml==3.4.2
 httplib2==0.7.4
-ajaxuploader==0.2.1
+ajaxuploader==0.3.6
 csvkit==0.9.1
-django-tastypie==0.9.14
+django-tastypie==0.12.0
 django_compressor==1.1
 BeautifulSoup==3.2.0
 sphinx==1.0.7

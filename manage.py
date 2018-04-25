@@ -18,7 +18,5 @@ except ImportError:
     sys.stderr.write("Error: Can't find the file '%s.py'.\n" % settings_module)
     sys.exit(1)
 
-print(settings_module)
-
 if __name__ == "__main__":
     execute_from_command_line(sys.argv)
