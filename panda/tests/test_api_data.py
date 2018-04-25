@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 
+import json
 from time import sleep
 
 from django.conf import settings
 from django.test import TransactionTestCase
 from django.test.client import Client
-from django.utils import simplejson as json
 from django.utils.timezone import now
 from tastypie.bundle import Bundle
 from tastypie.exceptions import BadRequest

@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 
 import logging
+import json
+
 from math import floor
 import os.path
 import time
@@ -10,7 +12,6 @@ from zipfile import ZipFile
 from panda.tasks.base import AbortableTask
 from csvkit import CSVKitWriter
 from django.conf import settings
-from django.utils import simplejson as json
 from django.utils.timezone import now 
 from django.utils.translation import ugettext
 from livesettings import config_value

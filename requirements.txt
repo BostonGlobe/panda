@@ -1,8 +1,8 @@
-django==1.4.8
+django==1.7
 fabric==1.2.2
 psycopg2==2.7
-celery==3.1.0
-django-celery==3.0.11
+celery==3.1.15
+django-celery==3.2.2
 kombu==3.0.30
 kombu-sqlalchemy==1.1.0
 python-dateutil==1.5

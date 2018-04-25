@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 
+import json
+
 from django.contrib.auth import authenticate
 from django.test import TransactionTestCase
 from django.test.client import Client
-from django.utils import simplejson as json
 from django.utils.timezone import now
 
 from panda.models import UserProfile, UserProxy

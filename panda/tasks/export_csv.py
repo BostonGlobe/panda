@@ -5,10 +5,10 @@ import logging
 from math import floor
 import os.path
 import time
+import json
 
 from csvkit import CSVKitWriter
 from django.conf import settings
-from django.utils import simplejson as json
 from django.utils.translation import ugettext
 from livesettings import config_value
 

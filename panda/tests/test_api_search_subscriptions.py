@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 
+import json
+
 from django.conf import settings
 from django.test import TransactionTestCase
 from django.test.client import Client
-from django.utils import simplejson as json
 
 from panda.models import SearchSubscription, UserProxy 
 from panda.tests import utils

@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 
 import re
+import json
 
 from django.conf import settings
 from django.core.urlresolvers import get_script_prefix, resolve, reverse
-from django.utils import simplejson as json
 from django.utils.translation import ugettext_lazy as _
 from tastypie import fields, http
 from tastypie.authorization import DjangoAuthorization

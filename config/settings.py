@@ -96,7 +96,7 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'config.urls'
 
 TEMPLATE_DIRS = (
-    os.path.join(SITE_ROOT, 'templates')
+    os.path.join(SITE_ROOT, 'templates'),
 )
 
 INSTALLED_APPS = (

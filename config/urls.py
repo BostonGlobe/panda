@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 from django.conf import settings
-from django.conf.urls.defaults import include, patterns
+from django.conf.urls import include, patterns
 from django.contrib import admin
 
 from longerusername.forms import AuthenticationForm

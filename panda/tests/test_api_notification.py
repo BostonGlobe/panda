@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 
+import json
 from datetime import datetime
 
 from django.conf import settings
 from django.test import TransactionTestCase
-from django.test.client import Client
-from django.utils import simplejson as json
+from django.test.client import Client 
 import pytz
 
 from panda.models import Notification, UserProxy 

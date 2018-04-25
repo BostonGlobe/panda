@@ -2,7 +2,7 @@
 
 from uuid import uuid4
 
-from django.utils import simplejson as json
+import json
 from django.utils.timezone import now
 
 def make_data_row(dataset, data, data_upload=None, external_id=None):

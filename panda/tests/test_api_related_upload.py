@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 
 import os.path
+import json
 
 from django.conf import settings
 from django.test import TransactionTestCase
 from django.test.client import Client
-from django.utils import simplejson as json
 
 from panda.models import RelatedUpload
 from panda.tests import utils

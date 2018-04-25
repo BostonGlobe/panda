@@ -4,10 +4,10 @@ import logging
 from math import floor
 import time
 import traceback
+import json
 
 from panda.tasks.base import AbortableTask
 from django.conf import settings
-from django.utils import simplejson as json
 from django.utils.translation import ugettext
 from livesettings import config_value
 

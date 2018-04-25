@@ -1,12 +1,13 @@
 #!/usr/bin/env python
 
+import json
+
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
 from django.contrib.auth.models import Group
 from django.conf import settings
 from django.test import TestCase, TransactionTestCase
 from django.test.client import Client
-from django.utils import simplejson as json
 from tastypie.bundle import Bundle
 
 from panda.api.users import UserValidation

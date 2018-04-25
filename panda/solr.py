@@ -6,11 +6,11 @@ Ultra-lightweight wrapper around Solr's JSON API.
 Replaces sunburnt in PANDA. Not a generic solution.
 """
 import datetime
+import json
 
 from django.conf import settings
 from django.core.serializers.json import DjangoJSONEncoder
 from django.utils import datetime_safe
-from django.utils import simplejson
 
 import requests
 
@@ -26,10 +26,10 @@ class SolrJSONEncoder(DjangoJSONEncoder):
             return super(SolrJSONEncoder, self).default(o)
 
 def dumps(data):
-    return simplejson.dumps(data, cls=SolrJSONEncoder)
+    return json.dumps(data, cls=SolrJSONEncoder)
 
 def loads(data):
-    return simplejson.loads(data)
+    return json.loads(data)
 
 class SolrError(Exception):
     """

@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 
+import json
+
 from django.core.serializers.json import DjangoJSONEncoder
 from django.db import models
-from django.utils import simplejson as json
 from south.modelsinspector import add_introspection_rules
 
 class JSONField(models.TextField):
