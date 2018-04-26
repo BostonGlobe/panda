@@ -212,5 +212,5 @@ def jst(request):
                 contents
             )
 
-    return HttpResponse(compiled, mimetype='text/javascript')
+    return HttpResponse(compiled, content_type='text/javascript')
 
