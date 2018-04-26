@@ -266,7 +266,7 @@ class UserResource(PandaModelResource):
             raise BadRequest(_("Invalid data sent."))
 
         user = UserProxy.objects.get(id=get_id)
-        profile = user.get_profile()
+        profile = user.userprofile
 
         profile.show_login_help = deserialized['show_login_help']
         profile.save()

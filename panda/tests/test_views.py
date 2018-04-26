@@ -89,7 +89,7 @@ class TestActivate(TransactionTestCase):
         new_user.is_active = False
         new_user.save()
 
-        user_profile = new_user.get_profile()
+        user_profile = new_user.userprofile
 
         response = self.client.get('/check_activation_key/%s/' % user_profile.activation_key)
 
@@ -115,7 +115,7 @@ class TestActivate(TransactionTestCase):
         new_user.is_active = False
         new_user.save()
 
-        user_profile = new_user.get_profile()
+        user_profile = new_user.userprofile
         self.assertNotEqual(user_profile.activation_key, None)
         self.assertGreater(user_profile.activation_key_expiration, now())
 
@@ -158,7 +158,7 @@ class  TestForgotPassword(TransactionTestCase):
         self.assertEqual(authenticate(username='foo@bar.com', password='foobarbaz').pk, new_user.pk)
         
         # Force expiration date into the past
-        user_profile = new_user.get_profile() 
+        user_profile = new_user.userprofile 
         user_profile.activation_key_expiration = now()
         user_profile.save()
 

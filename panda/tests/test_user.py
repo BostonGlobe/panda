@@ -27,7 +27,7 @@ class TestUser(TransactionTestCase):
 
         ApiKey.objects.get(user=new_user)
         new_user.groups.get(name="panda_user")
-        user_profile = new_user.get_profile()
+        user_profile = new_user.userprofile
 
         self.assertNotEqual(user_profile, None)
         self.assertNotEqual(user_profile.activation_key, None)
@@ -42,7 +42,7 @@ class TestUser(TransactionTestCase):
 
         ApiKey.objects.get(user=new_user)
         new_user.groups.get(name="panda_user")
-        user_profile = new_user.get_profile()
+        user_profile = new_user.userprofile
 
         self.assertNotEqual(user_profile, None)
         self.assertNotEqual(user_profile.activation_key, None)

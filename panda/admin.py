@@ -167,7 +167,7 @@ class UserModelAdmin(UserAdmin):
             )
 
         user = get_object_or_404(UserProxy, pk=pk)
-        user_profile = user.get_profile()
+        user_profile = user.userprofile
 
         user_profile.generate_activation_key()
         user_profile.save()
@@ -189,7 +189,7 @@ class UserModelAdmin(UserAdmin):
         users = list(queryset)
 
         for user in users:
-            user_profile = user.get_profile()
+            user_profile = user.userprofile
 
             user_profile.generate_activation_key()
             user_profile.save()

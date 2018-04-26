@@ -68,7 +68,7 @@ def make_user_login_response(user):
         'id': user.id,
         'email': user.email,
         'is_staff': user.is_staff,
-        'show_login_help': user.get_profile().show_login_help,
+        'show_login_help': user.userprofile.show_login_help,
         'notifications': notifications
     }
 
@@ -197,7 +197,7 @@ def forgot_password(request):
         if not user.is_active:
             return JSONResponse({ '__all__': _('Unknown or inactive email address.') }, status=400)
 
-        user_profile = user.get_profile()
+        user_profile = user.userprofile
         user_profile.generate_activation_key()
         user_profile.save()
 
